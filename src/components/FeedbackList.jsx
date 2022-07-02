@@ -10,7 +10,6 @@ function FeedbackList({ feedback, handleDelete }) {
 
   return (
     <div className="feedback-list">
-    {console.log(feedback)}
         {feedback.map((item) => (
             <FeedbackItem 
                 key={item.id} 

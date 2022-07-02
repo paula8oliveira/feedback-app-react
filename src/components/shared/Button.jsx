@@ -1,9 +1,8 @@
 import PropTypes from 'prop-types'
-import { isDisabled } from "@testing-library/user-event/dist/utils"
 
-function Button({ children, version, type, isDesabled }) {
+function Button({ children, version, type, isDisabled }) {
   return (
-      <button type={type} disabled={isDesabled} className={`btn btn-${version}`}>{children}</button>
+      <button type={type} disabled={isDisabled} className={`btn btn-${version}`}>{children}</button>
     
   )
 }
@@ -15,7 +14,7 @@ Button.defaultProps = {
 }
 
 Button.propTypes = {
-    childre: PropTypes.node.isRequired,
+    children: PropTypes.node.isRequired,
     version: PropTypes.string,
     type: PropTypes.string,
     isDesabled: PropTypes.bool,
